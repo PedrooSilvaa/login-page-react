@@ -5,12 +5,14 @@ interface UserInputProps
     extends React.InputHTMLAttributes<HTMLHtmlElement>{
         icon: ReactNode;
         title: string;
+        type: string;
     }
 
 export function UserInput(
     {
         icon,
-        title
+        title,
+        type
     }:UserInputProps
 ){
     return(
@@ -21,7 +23,7 @@ export function UserInput(
                 <h3 className="flex text-2x1 font-bold text-white"> {title}</h3>
             </div>
             <div className="">
-                <input type="text" className="w-[300px] h-[45px] bg-transparent rounded-md border"/>            
+                <input type={type} className="w-[300px] h-[45px] bg-transparent rounded-md border p-6 text-white font-medium"/>            
             </div>
         </div>
 
