@@ -21,7 +21,7 @@ export function UsernamePasswordModal(
                         <UserInput icon={<User className="size-8 text-white" />} title="USERNAME" type="text"></UserInput>
                         <UserInput icon={<Lock className="size-8 text-white" />} title="PASSWORD" type="password"></UserInput>
                     </div>
-                    <div className="flex justify-between p-0 m-0">
+                    <div className="flex justify-between px-3">
                         <button onClick={registerPage}>
                             <span className="text-white text-[10px] ">SIGN UP</span>
                         </button>

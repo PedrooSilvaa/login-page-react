@@ -20,7 +20,7 @@ export function UserRegister(
                 <UserInput icon={<Lock className="size-8 text-white"/>} title="PASSWORD" type="PASSWORD"/>
                 <UserInput icon={<Lock className="size-8 text-white"/>} title="CONFIRM PASSWORD" type="PASSWORD"/>    
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-end px-3">
                 <button onClick={loginPage}>
                     <span className="text-white text-[10px] ">SIGN IN</span>
                 </button>
