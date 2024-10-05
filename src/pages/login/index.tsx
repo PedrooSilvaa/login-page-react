@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { UsernamePasswordModal } from "./username-password-modal";
 import { ForgotPassword } from "./forgot-password";
+import { routes } from "../../routes/routes";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 export function Login(){
 
     const [isVisibleForgotPassword, setIsVisibleForgotPassword] = useState(false);
     const [title, setTitle] = useState("Sign In");
+    const navigate = useNavigate();
 
     function openForgotPassword(){
         setIsVisibleForgotPassword(true);
@@ -15,6 +18,9 @@ export function Login(){
     function closeForgotPassword(){
         setIsVisibleForgotPassword(false);
         setTitle("Sign In")
+    }
+    function registerPage(){
+        navigate('/register')
     }
 
     
@@ -26,7 +32,8 @@ export function Login(){
                     <ForgotPassword closeForgotPassword={closeForgotPassword}/>
                 ):(
                     <UsernamePasswordModal
-                    openForgotPassword={openForgotPassword}/>
+                    openForgotPassword={openForgotPassword}
+                    registerPage={registerPage}/>
                 )}
             </div>
                     
