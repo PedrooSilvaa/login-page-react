@@ -1,16 +1,22 @@
 import { Lock, User } from "lucide-react";
-import { UserInput } from "../../component/input";
-import { MainButton } from "../../component/button";
+import { UserInput } from "../../components/input";
+import { MainButton } from "../../components/button";
 
 interface UsernamePasswordModalProps{
     openForgotPassword: () => void
     registerPage: () => void
+    setUsername: (e: string) => void
+    setPassword: (e: string) => void
+    login: () => void
 }
 
 export function UsernamePasswordModal(
     {
         openForgotPassword,
-        registerPage
+        registerPage,
+        setUsername,
+        setPassword,
+        login
     }:UsernamePasswordModalProps
 ){
     return(
@@ -18,8 +24,8 @@ export function UsernamePasswordModal(
             <form action="" className="mt-[70px]">
                 <div className="">
                     <div className="flex flex-col gap-10">
-                        <UserInput icon={<User className="size-8 text-white" />} title="USERNAME" type="text"></UserInput>
-                        <UserInput icon={<Lock className="size-8 text-white" />} title="PASSWORD" type="password"></UserInput>
+                        <UserInput icon={<User className="size-8 text-white" />} title="USERNAME" type="text" setText={setUsername}></UserInput>
+                        <UserInput icon={<Lock className="size-8 text-white" />} title="PASSWORD" type="password" setText={setPassword}></UserInput>
                     </div>
                     <div className="flex justify-between px-3">
                         <button onClick={registerPage}>
@@ -30,7 +36,7 @@ export function UsernamePasswordModal(
                         </button>
                     </div>
                 </div>
-                <MainButton text="LOGIN" typeButton="submit" onClick={()=>alert("Login Feito")}/>
+                <MainButton text="LOGIN" typeButton="submit" onClick={login}/>
             </form>
         </div>
     )

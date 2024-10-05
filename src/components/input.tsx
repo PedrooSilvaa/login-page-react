@@ -6,13 +6,15 @@ interface UserInputProps
         icon: ReactNode;
         title: string;
         type: string;
+        setText: (e: string) => void;
     }
 
 export function UserInput(
     {
         icon,
         title,
-        type
+        type,
+        setText
     }:UserInputProps
 ){
     return(
@@ -23,7 +25,7 @@ export function UserInput(
                 <h3 className="flex text-2x1 font-bold text-white"> {title}</h3>
             </div>
             <div className="">
-                <input type={type} className="focus:outline-none w-[300px] h-[45px] bg-transparent rounded-md border p-6 text-white font-medium"/>            
+                <input onChange={(e) => setText(e.target.value)} type={type} className="focus:outline-none w-[300px] h-[45px] bg-transparent rounded-md border p-6 text-white font-medium"/>            
             </div>
         </div>
 

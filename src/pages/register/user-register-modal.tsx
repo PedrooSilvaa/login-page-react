@@ -1,6 +1,6 @@
 import { Lock, User } from "lucide-react";
-import { UserInput } from "../../component/input";
-import { MainButton } from "../../component/button";
+import { UserInput } from "../../components/input";
+import { MainButton } from "../../components/button";
 
 interface UserRegisterProps{
     loginPage: () => void

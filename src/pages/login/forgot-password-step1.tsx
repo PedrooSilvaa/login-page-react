@@ -1,7 +1,7 @@
 import { User } from "lucide-react";
-import { ArrowLeft } from "../../component/arrow-left";
-import { UserInput } from "../../component/input";
-import { MainButton } from "../../component/button";
+import { ArrowLeft } from "../../components/arrow-left";
+import { UserInput } from "../../components/input";
+import { MainButton } from "../../components/button";
 
 interface ForgotPasswordStep1Props{
     forgotPassword2: () => void
