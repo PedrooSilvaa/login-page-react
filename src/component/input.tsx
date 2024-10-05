@@ -23,7 +23,7 @@ export function UserInput(
                 <h3 className="flex text-2x1 font-bold text-white"> {title}</h3>
             </div>
             <div className="">
-                <input type={type} className="w-[300px] h-[45px] bg-transparent rounded-md border p-6 text-white font-medium"/>            
+                <input type={type} className="focus:outline-none w-[300px] h-[45px] bg-transparent rounded-md border p-6 text-white font-medium"/>            
             </div>
         </div>
 
