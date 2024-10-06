@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { UsernamePasswordModal } from "./username-password-modal";
 import { ForgotPassword } from "./forgot-password";
-import { json, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { api } from "../../lib/axios";
 
 
@@ -20,11 +20,12 @@ export function Login(){
             username, password
         })
             .then(async (json) => {
-                console.log(json.data.token)
+                alert(json.data.token)
             })
             .catch((err) => {
                 console.log(err.response.status);
                 console.log(username, password)
+                navigate("/")
             
             })
     }
